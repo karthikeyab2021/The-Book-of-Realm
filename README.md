@@ -1,5 +1,5 @@
 🎮 **Play The Book of Realms:**  
-[Play the game on itch.io](https://nobody-1602.itch.io/the-book-of-realms)
+[Play the game on itch.io](https://nobody-1602.itch.io/the-book-of-realms)  / https://karthikeyab2021.github.io/The-Book-of-Realm/
 
 # The Book of Realms: Stickman Combat
 
