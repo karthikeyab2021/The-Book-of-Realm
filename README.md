@@ -1,5 +1,5 @@
 🎮 **Play The Book of Realms:**  
-https://karthikeyab2021.github.io/The-Book-of-Realm/
+https://karthikeyab2021.github.io/The-Book-of-Realm/play.html
 
 # The Book of Realms: Stickman Combat
 
