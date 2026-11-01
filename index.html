@@ -275,6 +275,14 @@ kbd { display: inline-block; min-width: 1.8em; padding: .1em .45em; margin: 0 .1
 .portrait canvas { position: static; inset: auto; width: 100%; height: 100%; }
 .domain.sel::before { top: .9em; left: .9em; width: auto; padding: .2em .8em; transform: none; border-radius: .3em; font-size: .55em; }
 .hints { position: absolute; left: 2.5%; bottom: 1.1em; z-index: 2; padding: .35em .9em; border-radius: 2em; background: rgba(6, 10, 40, .55); backdrop-filter: blur(4px); }
+
+/* ===== Controls screen scrolls (it has more rows than fit on screen) ===== */
+#controls .panel { max-height: 94%; }
+#controls .scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding-right: .5em; scrollbar-width: thin; scrollbar-color: var(--gold) rgba(255, 255, 255, .1); }
+#controls .scroll::-webkit-scrollbar { width: .5em; }
+#controls .scroll::-webkit-scrollbar-thumb { background: var(--gold); border-radius: .3em; }
+#controls .scroll::-webkit-scrollbar-track { background: rgba(255, 255, 255, .1); border-radius: .3em; }
+#controls .panel > .mode { flex: none; }
 </style>
 </head>
 <body>
@@ -374,7 +382,7 @@ kbd { display: inline-block; min-width: 1.8em; padding: .1em .45em; margin: 0 .1
   <section id="controls" class="overlay hidden">
     <div class="panel wide">
       <div class="ptitle">Controls</div>
-      <table>
+      <div class="scroll"><table>
         <tr><th>Action</th><th>Player 1</th><th>Player 2</th></tr>
         <tr><td>Move</td><td><kbd>A</kbd> <kbd>D</kbd></td><td><kbd>←</kbd> <kbd>→</kbd></td></tr>
         <tr><td>Jump</td><td><kbd>W</kbd></td><td><kbd>↑</kbd></td></tr>
@@ -392,7 +400,7 @@ kbd { display: inline-block; min-width: 1.8em; padding: .1em .45em; margin: 0 .1
         <tr class="combo"><td>Shoot, then Special</td><td colspan="2">Lance: a long piercing beam</td></tr>
         <tr class="combo"><td>Parry, then Special</td><td colspan="2">Retaliation: a blast around you</td></tr>
       </table>
-      <p class="note">Tap Parry just before a hit lands for a perfect parry: the blow is negated and the attacker staggers. Hold Parry to keep guarding instead: it stops hits but sends nothing back, and wears down your guard meter (it breaks at zero). Technique and special moves cost energy (the thin bar under health), which refills over time and when you land hits. Getting hit while casting interrupts it. <kbd>Esc</kbd> pauses, <kbd>H</kbd> shows hitboxes.</p>
+      <p class="note">Tap Parry just before a hit lands for a perfect parry: the blow is negated and the attacker staggers. Hold Parry to keep guarding instead: it stops hits but sends nothing back, and wears down your guard meter (it breaks at zero). Technique and special moves cost energy (the thin bar under health), which refills over time and when you land hits. Getting hit while casting interrupts it. <kbd>Esc</kbd> pauses, <kbd>H</kbd> shows hitboxes.</p></div>
       <button class="mode primary" data-act="closeControls"><b>Back</b></button>
     </div>
   </section>
